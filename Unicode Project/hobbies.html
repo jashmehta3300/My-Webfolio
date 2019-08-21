@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en"><!--Lang attribute-->
+
+
+<head>
+
+    <!--Character set used in this page is Universal Transformation formaat 8 bit-->
+    <meta charset="UTF-8">
+    <!--sets the width of the page to follow the screen-width of the device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--To make the page compactable for older version of browsers-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Hobbies</title>
+    <link rel="icon" href="icon_new.jpg"></link> <!--Page icon-->
+    <link rel="stylesheet" href="style_hobbies.css"> <!--Linking css file-->
+
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+      <!-- href='#' will move the scroll position to the top.-->
+        <svg width="30" height="30">
+        <!--Scalable Vector Graphics (svg) is used to make the icon to open side bar-->
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>  <!--First white line-->
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>  <!--Second white line-->
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>  <!--Third white line-->
+        </svg>
+      </a>
+    </span>
+
+    <!--Contents of navigation bar on top of the page-->
+    <ul class="navbar-nav"> <!--Unordered list-->
+        <li><a href="index_new.html">Home</a></li>
+        <li><a href="about_me.html">About Me</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="job_history.html">Job History</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+    </ul>
+  </nav>
+
+  <!--Contents of navigation bar on top of the page-->
+  <div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">
+      &times;<!-- "&times" is preferred HTML entity for cross rather than 'x'-->
+    </a> 
+    <li><a href="index_new.html">Home</a></li>
+    <li><a href="about_me.html">About Me</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="job_history.html">Job History</a></li>
+    <li><a href="hobbies.html">Hobbies</a></li>
+  </div>
+    
+  <div class="wrap">
+      <div id="arrow-left" class="arrow"></div><!--Left arrow to navigate-->
+       
+        <div class="slide slide1">
+          <div class="slide-content">
+              <span>Table Tennis</span>
+          </div>
+        </div>
+        <div class="slide slide2">
+          <div class="slide-content">
+              <span>Trekking</span>
+          </div>
+        </div>
+        <div class="slide slide3">
+          <div class="slide-content">
+              <span>Music</span>
+          </div>
+        </div>
+        <div class="slide slide4">
+          <div class="slide-content">
+            <span>Reading</span>
+          </div>
+        </div>
+       
+      <div id="arrow-right" class="arrow"></div><!--Right arrow to navigate-->
+  </div>
+     
+
+<script>
+
+//RESPONSIVE SIDE BAR
+//When the svg tag is clicked the side menu open
+function openSlideMenu()
+{
+  document.getElementById('side-menu').style.width = '250px';  //side menu pops out
+}
+//When the close btn is pressed
+function closeSlideMenu()
+{
+  document.getElementById('side-menu').style.width = '0';  //side menu disappers 
+}
+
+//FULL PAGE IMAGE SLIDER
+let sliderImages = document.querySelectorAll(".slide"),
+arrowLeft = document.querySelector("#arrow-left"),
+arrowRight = document.querySelector("#arrow-right"),
+current = 0;
+
+// Clear all images
+function reset() 
+{
+  for (let i = 0; i < sliderImages.length; i++) 
+  {
+    sliderImages[i].style.display = "none";
+  }
+}
+
+// Init slider
+function startSlide() 
+{
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+// Show prev
+function slideLeft() 
+{
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+// Show next
+function slideRight() 
+{
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+
+// Left arrow click
+arrowLeft.addEventListener("click", function() 
+{
+  if (current === 0) 
+  {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+
+// Right arrow click
+arrowRight.addEventListener("click", function() 
+{
+  if (current === sliderImages.length - 1) 
+  {
+    current = -1;
+  }
+  slideRight();
+});
+
+startSlide();
+
+</script>
+
+</body>
+
+
+</html>

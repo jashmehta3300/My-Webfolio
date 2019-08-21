@@ -1,0 +1,170 @@
+body
+{
+  font-family:helvetica;
+  margin:0;
+  padding:0;  
+  background-color:black;
+  color: white;
+  overflow-x:hidden; /*No scroll bar to scroll in x direction*/
+}
+
+.navbar
+{
+  z-index: 1; /*To display it on top of the image slider*/
+}
+
+
+.navbar a
+{
+  float:left; /*To keep all the links on left*/
+  display:block; 
+  color:white; 
+  text-align:center;
+  padding:14px 16px;
+  text-decoration:none; /*To remove the underline*/
+  font-size:22px;
+}
+
+
+.navbar ul
+{
+  margin:8px 0 0 0;
+  list-style:none; /*To remove the dots of unordered list*/
+}
+
+.navbar a:hover /* When mouse points on a particular link*/
+{
+  font-weight:bold;
+  font-size: 25px;
+}
+
+.side-nav
+{
+  height:100%;
+  width:0;
+  position:fixed;
+  list-style: none; /*To remove the dots from the ul*/
+  z-index:1; /*To place it on the top of the image slider*/
+  /*Starts from the top left corner of the page*/
+  top:0;
+  left:0;
+  background-color:#111;
+  opacity:0.9;
+  overflow-x:hidden;
+  padding-top:60px;
+  transition:0.5s; /*Time taken by side bar to open*/
+}
+
+.side-nav a 
+{
+  padding:10px 10px 20px 30px;
+  text-decoration:none; /*To remove the underline*/
+  font-size:25px;
+  color:white;
+  display:block; /*'block' results in line break between 2 elements*/
+  transition:0.3s;
+}
+
+.side-nav a:hover /* When mouse points on a particular link*/
+{
+  color:white;
+  font-weight:bold;
+  font-size: 30px;
+}
+
+.side-nav .btn-close
+{ 
+  position:absolute; /*To place the close btn on the top right of side menu*/
+  top:0;
+  right:22px;
+  font-size:36px;
+  margin-left:50px;
+}
+
+
+@media(max-width:800px)  /*If the device width is less than 800px, navbar will disappear*/
+{
+  .navbar-nav{display:none}
+}
+
+
+
+.slide-content 
+{
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  width: 100%;
+  overflow-x: hidden;  /*To hide the scroll bar*/
+}
+
+.slide
+{
+  /*To place the images in the centre of the screen*/
+  background-position: center;
+  background-size:cover;
+  height: 740px; /*Same as the height given to the body*/
+}
+
+
+.slide1  /*Image 1*/
+{
+  background-image:url("img_TableTennis.jpg");
+  width:100%;
+}
+
+.slide2 /*Image 2*/
+{
+  background-image: url("img_trekking.jpg");
+  width:100%;
+}
+
+.slide3 /*Image 3*/
+{
+  background-image: url("img_music.jpg");
+  width:100%;
+}
+
+.slide4 /*Image 4*/
+{
+  background-image: url("img_reading.jpg");
+  width:100%;
+}
+
+.slide-content span
+{
+  font-size: 5rem;
+  color: #fff;
+  position: absolute;
+  /*To place the text in the centre of the screen*/
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.arrow 
+{
+  cursor: pointer; 
+  position: absolute;
+  top: 50%; /*To place the arrow in the centre*/
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left 
+{
+  border-width: 30px 40px 30px 0; /*uneven bordering done to make the left arrow*/
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+#arrow-right 
+{
+  border-width: 30px 0 30px 40px; /*uneven bordering done to make the right arrow*/
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 30px;
+}

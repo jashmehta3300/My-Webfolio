@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en"> <!--Lang attribute-->
+
+
+<head>
+  
+    <!--Character set used in this page is Universal Transformation Format 8 bit-->
+    <meta charset="UTF-8">
+    <!--sets the width of the page to follow the screen-width of the device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--To make the page compactable for older version of browsers-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Skills</title>
+    <link rel="icon" href="icon_new.jpg"></link> <!--Page icon-->
+    <link rel="stylesheet" href="style_skills.css"></linl> <!--Linking css file-->
+
+</head>
+
+
+<body>
+
+  <div class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+      <!-- href='#' will move the scroll position to the top.-->
+        <svg width="30" height="30">
+        <!--Scalable Vector Graphics (svg) is used to make the icon to open side bar-->
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>  <!--First white line-->
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>  <!--Second white line-->
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>  <!--Third white line-->
+        </svg>
+      </a>
+    </span>
+
+    <!--Contents of navigation bar on top of the page-->
+    <ul class="navbar-nav"> <!--Unordered list-->
+        <li><a href="index_new.html">Home</a></li>
+        <li><a href="about_me.html">About Me</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="job_history.html">Job History</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+    </ul>
+  </div>
+
+    <!--Contents of side bar-->
+    <div id="side-menu" class="side-nav">
+       <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a> <!-- "&times" is preferred HTML entity for cross rather than letter 'x'-->
+       <li><a href="index_new.html">Home</a></li>
+       <li><a href="about_me.html">About Me</a></li>
+       <li><a href="education.html">Education</a></li>
+       <li><a href="skills.html">Skills</a></li>
+       <li><a href="job_history.html">Job History</a></li>
+       <li><a href="hobbies.html">Hobbies</a></li>
+    </div>
+  
+  <!--This div is created to put background image-->
+  <div class="slide">
+  </div>
+
+
+  <!--Responsive Side Bar using JS-->
+  <script>
+    //When the svg tag is clicked the side menu open
+    function openSlideMenu()
+    {
+      document.getElementById('side-menu').style.width = '250px';  //side menu pops out
+    }
+    //When the close btn is pressed
+    function closeSlideMenu()
+    {
+      document.getElementById('side-menu').style.width = '0';  //side menu disappers 
+    }
+  </script>
+
+
+  <button class="button1">
+    <span>
+    <!--Link to be opened when the button is pressed-->  
+      <a href="https://www.google.co.in/search?ei=VplBXeHoBZTe9QOErZHYCw&q=c+programming+language&oq=c+&gs_l=psy-ab.3.1.0i131i67l2j0i67l7j0i131.1303.1810..5116...1.0..0.234.415.0j1j1......0....1..gws-wiz.....10..0i71j35i39j0.nVk7fK7ElIo">
+        <strong>
+        <!--HTML tag to make the contents bold-->   
+          C Programming
+        </strong>
+      </a>
+    </span>
+  </button>
+
+  <button class="button2">
+    <span>
+    <!--Link to be opened when the button is pressed-->  
+      <a href="https://www.google.co.in/search?ei=oapBXcqaFpGz9QO7zIWwCA&q=HTML&oq=HTML&gs_l=psy-ab.3..0i67j0i20i263j0i131j0i20i263j0l3j0i131j0l2.668489.671069..672882...1.0..1.465.991.0j2j1j0j1......0....1..gws-wiz.....10..0i71j35i39.cfx-qFj8oPo&ved=0ahUKEwiK7_Lus9_jAhWRWX0KHTtmAYYQ4dUDCAo&uact=5">
+        <strong>
+        <!--HTML tag to make the contents bold-->  
+          HTML
+        </strong>
+      </a>
+    </span>
+  </button>
+
+  <button class="button3">
+    <span>
+    <!--Link to be opened when the button is pressed-->  
+      <a href="https://www.google.co.in/search?q=CSS&ie=&oe=">
+        <strong>
+        <!--HTML tag to make the contents bold-->   
+          CSS
+        </strong>
+      </a>
+    </span>
+  </button>
+
+  <button class="button4">
+    <span>
+    <!--Link to be opened when the button is pressed-->  
+      <a href="https://www.google.com/search?q=javascript&oq=javascript&aqs=chrome..69i57j0l2j69i60l3.2672j0j7&sourceid=chrome&ie=UTF-8">
+        <strong>
+        <!--HTML tag to make the contents bold-->   
+          Java Script
+        </strong>
+      </a>
+    </span>
+  </button>
+
+  <button class="button5">
+    <span>
+    <!--Link to be opened when the button is pressed-->  
+      <a href="https://www.google.com/search?q=bootstrap&oq=bootstrap&aqs=chrome..69i57j0l3j69i60l2.4322j0j9&sourceid=chrome&ie=UTF-8">
+        <strong>
+        <!--HTML tag to make the contents bold-->   
+          Bootstrap
+        </strong>
+      </a>
+    </span>
+  </button>
+
+</body>
+
+
+</html>

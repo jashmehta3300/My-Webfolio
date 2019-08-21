@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en"> <!--Lang attribute-->
+
+
+<head>
+
+    <!--Character set used in this page is Universal Transformation Format 8 bit-->
+    <meta charset="UTF-8">
+    <!--sets the width of the page to follow the screen-width of the device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--To make the page compactable for older version of browsers-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>About Me</title>
+    <link rel="icon" href="icon_new.jpg"></link> <!--Page Icon-->
+    <link rel="stylesheet" href="style_about_me.css"> <!--Linking css file-->
+
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+      <!-- href='#' will move the scroll position to the top.-->
+        <svg width="30" height="30">
+        <!--Scalable Vector Graphics (svg) is used to make the icon to open side bar-->
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/><!--First white line-->
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/><!--Second white line-->
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/><!--Third white line-->
+        </svg>
+      </a>
+    </span>
+
+    <!--Contents of navigation bar on top of the page-->
+    <ul class="navbar-nav"> <!--Unordered List-->
+      <li><a href="index_new.html">Home</a></li>
+      <li><a href="about_me.html">About Me</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="job_history.html">Job History</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+    </ul>
+  </nav>
+
+  <!--Contents of side bar-->
+  <div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <li><a href="index_new.html">Home</a></li>
+    <li><a href="about_me.html">About Me</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="job_history.html">Job History</a></li>
+    <li><a href="hobbies.html">Hobbies</a></li>
+  </div>
+
+  <div class="slide">
+    <!--This div is created to put background image-->
+  </div>
+
+  <div id="main"> <!--Main information to be displayed-->
+    <p class="name">About Me</p>
+    <p class="branch">Young professional currently pursuing a Bachelor's degree in Computer Engineering at Dwarkadas Sanghvi College of Engineering. Highly enthusiastic about solving challenging real-life problems through programming. Dedicated to gaining real-world experience to assist with making a career path decision. Interested in positions that involve programming, analytics, creativity, business and management.</p>
+  </div>
+
+  <!--Responsive Side Bar using JS-->
+  <script>
+    //When the svg tag is clicked the side menu open
+    function openSlideMenu()
+    {
+      document.getElementById('side-menu').style.width = '250px'; //side menu pops out
+      document.getElementById('main').style.marginLeft = '150px'; //info on page shifts as menu pops out
+    }
+
+    function closeSlideMenu()
+    {
+      document.getElementById('side-menu').style.width = '0'; //side menu disappers
+      document.getElementById('main').style.marginLeft = '0';  //info shifts back to original position
+    }
+  </script>
+
+</body>
+
+
+</html>

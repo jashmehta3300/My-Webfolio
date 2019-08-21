@@ -1,0 +1,173 @@
+body
+{
+  font-family:helvetica;
+  background-color:black;
+  color: white;
+  overflow-x:hidden; /*No scroll bar to scroll in x direction*/
+  height: 737px; /*To find the height of window:var x = window.innerHeight;console.log(x);*/
+}
+
+.slide
+{
+  /*Decrease the opacity of the background img*/
+  background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url("skills_img.jpg");
+
+  /*Following 3 steps are for setting the background img correctly*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 737px; /*Set the height of background img same as height of window*/
+}
+
+.navbar a
+{
+  float:left; /*To keep all the links on left*/
+  color:white; 
+  text-align:center;
+  padding:14px 16px; /*to seperate the links*/
+  text-decoration:none; /*to remove the default underline property given to links*/
+  font-size:22px;
+}
+
+
+.navbar ul
+{
+  margin: 8px 0 0 0;
+  list-style:none; /*To remove the dots of unordered list*/
+}
+
+.navbar a:hover /* When mouse hovers over a particular link*/
+{
+  font-weight:bold;
+  font-size: 25px;
+}
+
+.side-nav
+{
+  height:100%; /*covers the full page*/
+  width:0; /*initially it should not be seen and when it is opened, width becomes 250px which is executed by JS code*/
+  position:fixed; /*Will stay in its position even if the page is scrolled*/
+  list-style: none; /*to remove the dots from ul*/
+  z-index:1; /*Because its z index is more, it will be placed over anything else*/
+  top:0;
+  left:0;
+  background-color:#111;
+  opacity:0.9;
+  overflow-x:hidden; /*To hide the scroll bar*/
+  padding-top:60px;
+  transition:0.5s; /*Time taken by side bar to open*/
+}
+
+.side-nav a 
+{
+  padding:10px 10px 20px 30px;
+  text-decoration:none; /*remove the underline*/
+  font-size:25px;
+  color:white;
+  display:block; /*'block' results in line break between 2 elements*/
+  transition:0.3s;
+}
+
+.side-nav a:hover /* When mouse points on a particular link*/
+{
+  color:white;
+  font-weight:bold;
+  font-size: 30px;
+}
+
+.side-nav .btn-close
+{ 
+  position:absolute; /*To place the close btn on the top right of side menu*/
+  top:0;
+  right:22px;
+  font-size:36px;
+  margin-left:50px;
+}
+
+@media(max-width:800px)  /*If the device width is less than 800px, navbar will disappear*/
+{
+  .navbar-nav{display:none}
+}
+
+.button1, .button2, .button3, .button4, .button5
+{
+display: inline-block; 
+position: absolute;
+left:35%; /*position the buttons in the centre of the centre of the screen*/
+border-radius: 4px; /*To make the edges of the button curved*/
+border: none; /*CSS button has a border by default so we need to remove that*/
+font-family:helvetica;
+background-color: transparent;
+color: white;
+text-align: center;
+font-size: 50px;
+padding: 20px; /*to make the buttons wider*/
+width: 450px;
+transition: all 0.5s;
+cursor: pointer; /*As mouse hovers over the button, the cursor becomes a pointer*/
+margin: 5px;
+}
+
+.button1 span ,.button2 span, .button3 span, .button4 span, .button5 span
+ {  
+ cursor: pointer;/*As mouse hovers over the button, the cursor becomes a pointer*/
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+ }
+
+.button1 span:after, .button2 span:after, .button3 span:after, .button4 span:after, .button5 span:after
+{
+  content: '\00bb';/*Right pointing arrow*/
+  position: absolute; 
+  opacity: 0; /*initially the opacity is 0 so its not seen*/
+  top: 0;  
+  right: -20px; /*it is at -20px initially and will come to 0px when hovered*/
+  transition: 0.5s; /*It takes 0.5s to show this transition*/
+}
+
+.button1:hover span, .button2:hover span, .button3:hover span, .button4:hover span, .button5:hover span
+{ 
+    padding-right: 25px; /*so text moves towards left and right pointing arrow appears*/
+}
+
+.button1:hover span:after, .button2:hover span:after , .button3:hover span:after , .button4:hover span:after , .button5:hover span:after  
+{  
+  opacity: 1; /*change opacity from 0 to 1 so that when arrow points to the button, the right pointing arrow is visible*/
+  right: 0; /*Moves from -20px to 0px*/
+}
+
+span a
+{
+  color:white;
+  text-decoration: none; /*To remove the underline*/
+}
+
+/*POSITIONING OF BUTTONS*/
+
+.button1
+{
+  top:15%;
+}
+
+.button2
+{
+  top:29%;
+}
+
+.button3
+{
+  top:43%;
+}
+
+.button4
+{
+  top:57%;
+}
+
+.button5
+{
+  top:73%;
+}

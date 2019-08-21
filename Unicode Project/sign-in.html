@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--Character set used in this page is Universal Transformation Format 8 bit-->
+   <meta charset="UTF-8">
+   <!--sets the width of the page to follow the screen-width of the device -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--To make the page compactable for older version of browsers-->
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Projects</title>
+   <link rel="icon" href="icon_new.jpg"></link> <!--Page icon-->
+   <link rel="stylesheet" href="style_sign-in.css"> <!--Linking css file-->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+   crossorigin="anonymous"></link><!--Link for using Montserrat font-->
+
+
+</head>
+<body>
+        <h2>Task 3</h2>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Create Account</h1>
+                    <div class="social-container">
+                        <!--Linking icons to the sites-->
+                        <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://accounts.google.co.in/" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="https://in.linkedin.com/" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <input id="email123" type="email" placeholder="Email" />
+                    <input id="mobNo" type="number" placeholder="Mobile Number">
+                    <input id="pass123" type="password" placeholder="Password"/>
+                    <button id="sign_up">Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Sign in</h1>
+                    <div class="social-container">
+                        <!--Linking icons to the sites-->
+                        <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://accounts.google.co.in/" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="https://in.linkedin.com/" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your account</span>
+                    <input type="email" placeholder="Email" id="log_email" />
+                    <input type="password" placeholder="Password" id="log_pass"/>
+                    <a href="https://support.google.com/mail/answer/56256?hl=en">Don't have an e-mail id? Make one now.</a>
+                    <button id="sign_in">Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>To keep connected with us please login with your personal info </p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="app_sign-in.js"> 
+        /*Attach JS file*/
+        </script>
+</body>
+</html>

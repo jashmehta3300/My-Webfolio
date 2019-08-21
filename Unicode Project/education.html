@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"> <!--Lang attribute--> 
+
+
+<head>
+
+  <!--Character set used in this page is Universal Transformation Format 8 bit-->
+  <meta charset="UTF-8">
+  <!--sets the width of the page to follow the screen-width of the device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--To make the page compactable for older version of browsers-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+  <title>Education</title>
+  <link rel="icon" href="icon_new.jpg"></link> <!--Page icon-->
+  <link rel="stylesheet" href="style_education.css"> <!--Linking css file-->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+
+  <div class="navbar123">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+      <!-- href='#' will move the scroll position to the top.-->
+        <svg width="30" height="30">
+        <!--Scalable Vector Graphics (svg) is used to make the icon to open side bar-->
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>  <!--First white line-->
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>  <!--Second white line-->
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>  <!--Third white line-->
+        </svg>
+      </a>
+    </span>
+
+    <!--Contents of navigation bar on top of the page-->
+    <ul class="navbar-nav123"> <!--Unordered list-->
+        <li><a href="index_new.html">Home</a></li>
+        <li><a href="about_me.html">About Me</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="job_history.html">Job History</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+    </ul>
+  </div>
+
+  <!--Contents of side bar-->
+  <div id="side-menu123" class="side-nav123">
+    <a href="#" class="btn-close123" onclick="closeSlideMenu()">&times;</a> <!-- "&times" is preferred HTML entity for cross rather than letter 'x'-->
+      <li><a href="index_new.html">Home</a></li>
+      <li><a href="about_me.html">About Me</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="job_history.html">Job History</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+  </div>
+               
+  <div class="main"> <!--Title of the page-->
+    <p class="name">Education</p>
+  </div>
+
+  <div class="container-fluid"><!--Container will stretch along full width of the viewport-->
+    <div class="row">
+      <!--To create a row in bootstrap-->
+      <div class="flip-card card-1 col-sm-3">
+      <!--Occupies 3 columns-->
+        <div class="flip-card-inner">
+          <div class="flip-card-front" id="first-first">
+          <!--On the front side of the flip card 1-->  
+              <img src="school.jpg" style="width:100%;height:100%"></img>
+          </div>
+          <div class="flip-card-back" id="first-second">
+          <!--On the back side of the flip card 1-->  
+            <p class="name1">School</p>
+            <ul class="list">
+                <li>Gundecha Education Academy</li>
+                <li>ICSE (X) : <strong>96%</strong></li>
+                <li>Graduated in: 2016</li>
+            </ul>
+          </div>   
+        </div>
+      </div>
+      
+ 
+      <div class="flip-card card-2 col-sm-3 ">
+      <!--Occupies 3 columns-->  
+        <div class="flip-card-inner">
+          <div class="flip-card-front" id="second-first">
+          <!--On the front side of the flip card 2-->  
+              <img src="img_pace.jpg" style="width:100%;height:100%"></img>
+          </div>
+          <div class="flip-card-back" id="second-seconds">
+          <!--On the back side of the flip card 2-->  
+            <p class="name2">Junior College</p>
+            <ul class="list">
+                <li>Pace Junior Science College</li>
+                <li>HSC (XII) : <strong>89%</strong></li>
+                <li>MHCET : <strong>152</strong></li>
+                <li>Mains : <strong>147</strong></li>
+            </ul>  
+          </div>  
+       </div>
+      </div>
+  
+      <div class="flip-card card-3 col-sm-3 ">
+        <!--Occupies 3 columns--> 
+        <div class="flip-card-inner">
+          <div class="flip-card-front" id="third-first">
+          <!--On the front side of the flip card 3-->  
+              <img src="img_dj.png" style="width:100%;height:100%"></img>
+          </div>
+          <div class="flip-card-back" id="third-second">
+          <!--On the back side of the flip card 3-->  
+            <p class="name3">College</p>
+            <ul class="list">
+                <li>DJ Sanghvi </li>
+                <li>Computer Science Department</li>
+                <li>Will Graduate in : 2022</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!--Responsive Side Bar using JS-->
+  <script>
+      //When the svg tag is clicked the side menu open
+      function openSlideMenu()
+      {
+        document.getElementById('side-menu123').style.width = '250px';  //side menu pops out
+        document.getElementById('main').style.marginLeft = '250px';  //info on page shifts as menu pops out
+      }
+      //When the close btn is pressed
+      function closeSlideMenu()
+      {
+        document.getElementById('side-menu123').style.width = '0';  //side menu disappers 
+        document.getElementById('main').style.marginLeft = '0';  //info shifts back to original position
+      }
+  </script>     
+
+</div>
+</body>
+
+
+</html>

@@ -1,0 +1,142 @@
+body
+{
+  font-family:helvetica;
+  background-color:black;
+  color: white;
+  overflow-x:hidden; /*No scroll bar to scroll in x direction*/
+  height: 737px;/*To find the height of window:var x = window.innerHeight;console.log(x);*/
+}
+
+  .slide
+{
+  /*Decrease the opacity of the background img*/
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url("about_me_img1.jpg");
+
+  /*Following 3 steps are for setting the background img correctly*/
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 737px;/*Set the height of background img same as height of window*/
+}
+  
+  
+.navbar a
+{
+  float:left; /*To keep all the links on left*/
+  display:block;
+  color:white;
+  text-align:center;
+  padding:14px 16px;/*to seperate the links*/
+  text-decoration:none;/*to remove the default underline property given to links*/
+  font-size:22px;
+}
+  
+.navbar ul
+{
+  margin:8px 0 0 0;
+  list-style:none; /*To remove the dots of unordered list*/
+}
+  
+.navbar a:hover /* When mouse hovers over a particular link*/
+{
+  font-weight:bold;
+  font-size: 25px;
+}
+  
+.side-nav
+{
+  height:100%;/*covers the full page*/
+  width:0; /*initially it should not be seen and when it is opened, width becomes 250px which is executed by JS code*/
+  position:fixed;/*Will stay in its position even if the page is scrolled*/
+  list-style: none; /*to remove the dots from ul*/
+  z-index:1;/*Because its z index is more, it will be placed over anything else*/
+  top:0;
+  left:0;
+  background-color:#111;
+  opacity:0.9;
+  overflow-x:hidden; /*To hide the scroll bar*/
+  padding-top:60px;
+  transition:0.5s;/*Time taken by side bar to open*/
+}
+  
+.side-nav a
+{
+  padding:10px 10px 20px 30px;
+  text-decoration:none; /*remove the underline*/
+  font-size:25px;
+  color:white;
+  display:block; /*'block' results in line break between 2 elements*/
+  transition:0.3s;
+}
+  
+.side-nav a:hover  /* When mouse points on a particular link*/
+{
+  color:white;
+  font-weight:bold;
+  font-size: 30px;
+}
+  
+.side-nav .btn-close
+{
+  position:absolute; /*To place the close btn on the top right of side menu*/
+  top:0;
+  right:22px;
+  font-size:36px;
+  margin-left:50px;
+}
+  
+#main
+{
+  transition:margin-left 0.5s; /*When side bar opens the contents shift smoothly*/
+  position: absolute;
+  top:9%;
+  left:0%;
+  overflow:hidden; /*Hide the scroll bars*/
+  width:100%;
+  text-align: center;
+}
+  
+@media(max-width:800px) /*If the device width is less than 800px, navbar will disappear*/
+{
+  .navbar-nav{display:none}
+}
+  
+  
+.name 
+{
+  font-weight: bold;
+  font-size:6em;  /*1em = current font size of the document*/
+  margin-bottom: 0;
+  position: relative;
+  animation: heading;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;/*The element will retain the style values that is set by the last keyframe*/
+}
+  
+.branch 
+{
+  font-size: 1.5em; /*1em = current font size of the document*/
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 2%;
+  animation: nextLine;
+  position: relative;
+  animation-duration: 1s;
+  animation-delay: 1s; /*Animation will start after 1s*/
+  opacity: 0;/*Initially the opacity will be 0*/
+  animation-fill-mode: forwards;/*The element will retain the style values that is set by the last keyframe*/
+}
+  
+@keyframes heading
+{
+  0%{top:-900px;opacity: 0;}/*At 0s the text will be at -900px (out of the screen)*/
+  100%{top:0%;opacity:1;} /*At 1.5s the text will be at 0px (its original position)*/
+}
+  
+@keyframes nextLine
+{
+  0%{bottom:-900px;opacity: 0;} /*At 0s the text will be at -900px (out of the screen)*/
+  100%{bottom:0%;opacity:1;} /*At 1.5s the text will be at 0px (its original position)*/
+}
